@@ -4,10 +4,11 @@
 <head>
 
   <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
-
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
   <title>雙語計畫網頁</title>
 
   <!-- Bootstrap core CSS -->
@@ -16,7 +17,26 @@
   <!-- Custom styles for this template -->
   <link href="css/modern-business.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <style type="text/css">
+    #eventlist { list-style:none;}
+    #eventlist li { list-style:none; padding:0px; margin-bottom:15px; border-bottom:2px solid #40e0d0;}
+    .eventtitle { font-weight:bold; }
+</style>
+
+
 </head>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript">
+  jQuery(function ($) {
+      $('#eventlist').gCalReader({
+        calendarId:'zh.taiwan#holiday@group.v.calendar.google.com',
+        apiKey:'AIzaSyD53x-1GgVFK_AMaxnxmYcsK845GDrOJrs',
+        sortDescending: false
+       });
+  });
+ </script>
 
 <body style="background: url(img/bg.png);">
   <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
@@ -24,47 +44,30 @@
   <!-- Navigation -->
   <nav id="navbar" class="navbar fixed-top navbar-expand-lg">
     <div class="container">
-      <a class="navbar-brand" href="index.html"><img id="logo" src="logo.png" alt="" width="15%"></a>
-      <button class="navbar-toggler navbar-toggler-center" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+      <a class="navbar-brand" href="index.html"><img id="logo" src="img/logo-img/logo.jpg" alt="" width="25%"></a>
+      <button class="navbar-toggler ml-auto custom-toggler" type="button" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon my-toggler"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              About XXX
+              About
             </a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
-              <a class="dropdown-item" href="about-1.html">School location</a>
-              <a class="dropdown-item" href="about-1.html">School website</a>
-              <a class="dropdown-item" href="about-1.html">School’s brief history</a>
-              <a class="dropdown-item" href="about-1.html">School features</a>
+              <a class="dropdown-item" href="Infomation.html">School Information</a>
+              <a class="dropdown-item" href="features.html">Features</a>
+              <a class="dropdown-item" href="history.html">History</a>
+              
             </div>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="about-1.html">Organization</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="about-1.html">Contact</a>
+            <a class="nav-link" href="contact.html">Contact</a>
           </li>
-         
-          
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPages" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Other Pages
-            </a>
-            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPages">
-              <a class="dropdown-item" href="about-1.html">Full Width Page</a>
-              <a class="dropdown-item" href="about-1.html">Sidebar Page</a>
-              <a class="dropdown-item" href="about-1.html">FAQ</a>
-              <a class="dropdown-item" href="about-1.html">404</a>
-              <a class="dropdown-item" href="about-1.html">Pricing Table</a>
-            </div>
-          </li>
-          <!-- <form class="example" action="index.html">
-            <input type="text" placeholder="Search.." name="search">
-            <button type="submit"><i class="fa fa-search"></i></button>
-          </form> -->
+    
         </ul>
       </div>
     </div>
@@ -79,21 +82,21 @@
       </ol>
       <div class="carousel-inner" role="listbox">
         <!-- Slide One - Set the background image for this slide in the line below -->
-        <div class="carousel-item active" style="background-image: url('01.jpeg')">
+        <div class="carousel-item active" style="background-image: url('img/carousel-img/01.jpeg')">
           <div class="carousel-caption d-none d-md-block">
             <h3>First Slide</h3>
             <p>This is a description for the first slide.</p>
           </div>
         </div>
         <!-- Slide Two - Set the background image for this slide in the line below -->
-        <div class="carousel-item" style="background-image: url('02.jpeg')">
+        <div class="carousel-item" style="background-image: url('img/carousel-img/02.jpeg')">
           <div class="carousel-caption d-none d-md-block">
             <h3>Second Slide</h3>
             <p>This is a description for the second slide.</p>
           </div>
         </div>
         <!-- Slide Three - Set the background image for this slide in the line below -->
-        <div class="carousel-item" style="background-image: url('03.jpeg')">
+        <div class="carousel-item" style="background-image: url('img/carousel-img/03.jpeg')">
           <div class="carousel-caption d-none d-md-block">
             <h3>Third Slide</h3>
             <p>This is a description for the third slide.</p>
@@ -116,108 +119,67 @@
 
      <!-- Features Section -->
      <div class="row">
-      <div class="col-lg-6">
-        <h2>Welcome To XXX</h2>
-        <p>NSYSU</p>
-        <ul>
-          <li>
-            <strong>Bootstrap v4</strong>
-          </li>
-          <li>jQuery</li>
-          <li>Font Awesome</li>
-          <li>Working contact form with validation</li>
-          <li>Unstyled page elements for easy customization</li>
-        </ul>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, omnis doloremque non cum id reprehenderit, quisquam totam aspernatur tempora minima unde aliquid ea culpa sunt. Reiciendis quia dolorum ducimus unde.</p>
+      <div class="col-lg-7">
+        <h2 class="line my-4">Welcome To XXX</h2>
+        <div class="mx-3">
+          <p>National Sun Yat-sen University</p>
+          <ul>
+            <li>6 COLLEGES</li>
+            <li>21 Undergraduate Programs</li>
+            <li>41Master Programs</li>
+            <li>27 Doctoral Programs</li>
+          </ul>
+          <p>NSYSU was established in 1980 by the Ministry of Education as a leading comprehensive higher education institution in southern Taiwan. Along the years, NSYSU has grown to become one of the best universities in the country.</p>
+  
+        </div>
       </div>
-      <div class="col-lg-6">
-        <img class="img-fluid rounded" src="04.jpg" alt="">
+      <div class="col-lg-5">
+        <img class="img-fluid rounded my-4" src="img/content-img/schoolimg01.jpg" alt="">
       </div>
     </div>
    
 
-    <h1 class="my-4">NEWS</h1>
 
-    <!-- Marketing Icons Section -->
-    <div class="row">
-      <div class="col-lg-3 mb-3">
-        <div class="card h-100">
-          <h4 class="card-header">Happy Holidays!</h4>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-7">
+        <h2 class="line my-4">News</h2>
+        <div class="card" style="height: fit-content">
+          <h4 class="card-header">Sunshine ARTS Festival is coming!</h4>
           <div class="card-body">
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
-          </div>
-          <div class="card-footer">
-            <a href="#" class="btn btn-primary">Learn More<svg width="13px" height="10px" viewBox="0 0 13 10">
-              <path d="M1,5 L11,5"></path>
-              <polyline points="8 1 12 5 8 9"></polyline>
-            </svg></a>
-            
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 mb-3">
-        <div class="card h-100">
-          <h4 class="card-header">Card Title</h4>
-          <div class="card-body">
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis ipsam eos, nam perspiciatis natus commodi similique totam consectetur praesentium molestiae atque exercitationem ut consequuntur, sed eveniet, magni nostrum sint fuga.</p>
-          </div>
-          <div class="card-footer">
-            <a href="#" class="btn btn-primary">Learn More<svg width="13px" height="10px" viewBox="0 0 13 10">
-              <path d="M1,5 L11,5"></path>
-              <polyline points="8 1 12 5 8 9"></polyline>
-            </svg></a>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 mb-3">
-        <div class="card h-100">
-          <h4 class="card-header">Card Title</h4>
-          <div class="card-body">
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
-          </div>
-          <div class="card-footer">
-            <a href="#" class="btn btn-primary">Learn More<svg width="13px" height="10px" viewBox="0 0 13 10">
-              <path d="M1,5 L11,5"></path>
-              <polyline points="8 1 12 5 8 9"></polyline>
-            </svg></a>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 mb-3">
-        <div class="card h-100">
-          <h4 class="card-header">Card Title</h4>
-          <div class="card-body">
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
-          </div>
-          <div class="card-footer">
-            <a href="#" class="btn btn-primary">Learn More<svg width="13px" height="10px" viewBox="0 0 13 10">
-              <path d="M1,5 L11,5"></path>
-              <polyline points="8 1 12 5 8 9"></polyline>
-            </svg></a>
-          </div>
-        </div>
-        
-      </div>
+            <div class="row">
+              <div class="col-lg-5"><div class="card-img">
+                <img class="img-thumbnail" src="img/campain.jpg" alt="" width="280px">
+              </div>
     </div>
-    <!-- /.row -->
-
-   
-
-   
-
-    <hr>
-
-    <!-- Call to Action Section -->
-    <div class="row mb-4">
-      <div class="col-md-8">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, expedita, saepe, vero rerum deleniti beatae veniam harum neque nemo praesentium cum alias asperiores commodi.</p>
+              <div class="col-lg-7">
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
+                <a href="#" class="btn btn-primary" style="float: right;">Learn More<svg width="13px" height="10px" viewBox="0 0 13 10">
+                  <path d="M1,5 L11,5"></path>
+                  <polyline points="8 1 12 5 8 9"></polyline></svg></a>        
+              </div>
+            </div>
+          </div>
+          <div class="card-footer">
+          </div>
+        </div>
       </div>
-      <div class="col-md-4">
-        <a class="btn btn-lg btn-secondary btn-block" href="#">Call to Action</a>
-      </div>
-    </div>
+      <div class="col-lg-5">
+        <h2 class="line my-4">School Calendar
+          <a href="#"><span style="font-size: medium;"> PDF </span><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbG5zOnN2Z2pzPSJodHRwOi8vc3ZnanMuY29tL3N2Z2pzIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDQwIDQwIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA1MTIgNTEyIiB4bWw6c3BhY2U9InByZXNlcnZlIiBjbGFzcz0iIj48Zz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KCTxwYXRoIGQ9Ik0yMCwwQzguOTczLDAsMCw4Ljk3MywwLDIwYzAsMTEuMDI3LDguOTczLDIwLDIwLDIwYzExLjAyNywwLDIwLTguOTczLDIwLTIwQzQwLDguOTczLDMxLjAyNywwLDIwLDB6IE0yNy43NTYsMjMuNDY1ICAgbC02LjI3OSw1LjMzMkMyMS4wNTEsMjkuMTU4LDIwLjUyNSwyOS4zNCwyMCwyOS4zNGMtMC41MjYsMC0xLjA1Mi0wLjE4Mi0xLjQ3OC0wLjU0M2wtNi4yNzktNS4zMzIgICBjLTAuOTU5LTAuODE2LTEuMDc3LTIuMjU2LTAuMjYyLTMuMjE3YzAuODE1LTAuOTU5LDIuMjU1LTEuMDc4LDMuMjE2LTAuMjYybDIuNTIxLDIuMTQxdi05LjE4NmMwLTEuMjYsMS4wMjEtMi4yODEsMi4yODItMi4yODEgICBjMS4yNiwwLDIuMjgxLDEuMDIxLDIuMjgxLDIuMjgxdjkuMTg2bDIuNTIxLTIuMTQxYzAuOTYyLTAuODE0LDIuNDAxLTAuNjk3LDMuMjE4LDAuMjYyICAgQzI4LjgzNCwyMS4yMDksMjguNzE2LDIyLjY0OCwyNy43NTYsMjMuNDY1eiIgZmlsbD0iIzQwZTBkMCIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgc3R5bGU9IiIgY2xhc3M9IiI+PC9wYXRoPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjwvZz48L3N2Zz4=" width="7%" />
+          
+          </a></h2>
 
+
+        <ul class="justify-content-center" id="eventlist"></ul>
+      </div>
+      </div>
+    </div>	  
   </div>
+</div>
+
+  
+
   <!-- /.container -->
 
   <!-- Footer -->
@@ -225,38 +187,25 @@
     <div class="container">
       <div class="row">
         <div class="col-12 col-md-4">
-          <div class="fbtn"><img class="pin" src="img/pin.svg" alt="" width="10%">&nbsp;&nbsp;&nbsp;Location</div>
-          <div class="fbtn facebook"><img class="pin" src="img/fb.svg" alt="" width="10%">&nbsp;&nbsp;&nbsp;Facebook</div>
+          <div style="margin-top: 25px;"><img src="img/logo-img/logo.png" alt="" width="55%"></div>
         </div>
         <div class="col-12 col-md-4"><h3 class="text-white" style=" border-left: #ffffff 10px solid;padding-left: 5px;">Contact Us</h3><p class="text-white" style="line-height: 32px;padding-left: 18px;">Tel：07-123-456<br>
           Fax：07-123-456<br>
           Email：nsysu@mail.nsysu.edu.tw<br>
           Service：Mon.-Fri. 9:00-17:00</p></div>
-        <div class="col-12 col-md-4"><body onload="init()">
-          <form   enctype="text/plain" accept-charset="utf-8">
-             <!-- 寄件者姓名    -->
-              <input id="nameText" type="text" name="Name"  value size="40" placeholder="Name" required>  <!-- required 必填欄位 ，placeholder 預設內容--> 
-              
-              <!-- 寄件者email -->
-              <input id="emailText" type="email" name="Email"  value size="40" placeholder="Email" required>
-              
-              <!-- 郵件主旨 -->
-              <input  id="subText" type="text" name="Subject"  value size="40" aria-invalid="false" placeholder="Subject" required>
-                      
-              <!-- 郵件內容 -->
-              <textarea id="bodyText" name="your-message" cols="53" rows="3"  aria-required="true" aria-invalid="false" placeholder="Your Message" required></textarea>
-              
-              <!-- 傳送按鈕 -->
-              <div>
-                  <input type="button" class="btn btn-primary"value="Send" onclick="submitHandler();">
-                  <a id="mailTo"></a>
-              </div>
-          </form>
-         </body></div>
+        <div class="col-12 col-md-4">
+          <h3 class="text-white" style=" border-left: #ffffff 10px solid;padding-left: 5px;">Links</h3>
+          <div class="social" style="margin-top: 55px;">
+            <a href="https://www.facebook.com/" target="_blank" title="Facebook"><div class="col-12 col-md-4" style="display: inline;"><img src="img/icon/facebook.png" alt=""></div></a>
+            <a href="https://www.youtube.com/" target="_blank" title="Instagram"><div class="col-12 col-md-4" style="display: inline;"><img src="img/icon/instagram.png" alt=""></div></a>
+            <a href="https://www.youtube.com/" target="_blank" title="Youtube"><div class="col-12 col-md-4" style="display: inline;"><img src="img/icon/youtube.png" alt=""></div></a>
+          </div>
+            
+        </div>
        </div>
       
       
-      <!-- <p class="m-0 text-center text-white">Copyright &copy;2020</p> -->
+      <!-- <p class="m-0 text-center text-white">Copyright &copy;2021</p> -->
     </div>
     <!-- /.container -->
   </footer>
@@ -266,32 +215,7 @@
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   
-<script>
-  //宣告預設表單內容為空 （你想要的話也可以加東西）
-      var initSubject='',initBody='';
-   
-      //按下傳送按鈕後執行
-      function submitHandler(){
-          var to = "hsiuwennn5@gmail.com";//寫死的傳送對象 就是公司的信箱 不會顯示在網頁上
-          var name = nameText.value;//讀取ID為 nameTextuser 物件中的值
-          var email = emailText.value;
-          var subject = subText.value;
-  //把user填的資料都塞到 mail body 中
-          var body = ""+bodyText.value+'%0A%0A%0A';//%0A是換行 換了三行
-              body += "From："+nameText.value+'%0A';
-              body += "Email："+emailText.value+'%0A';
-              body += "Tel："+telText.value;
-  //傳送的主要程式碼
-          mailTo.href="mailto:"+to+"?subject="+subject+"&body="+body;
-          mailTo.click();
-      }
-  //在body onload
-      function init(){
-          subText.value=initSubject;
-          toText.value=initTo;
-          bodyText.value=initBody;
-      }
-  </script>
+
 </body>
 
 </html>
